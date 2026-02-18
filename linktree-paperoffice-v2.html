@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Office Gráfica - Links</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .profile {
+            margin-bottom: 40px;
+            animation: fadeInDown 0.6s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container {
+            width: 10vw;
+            height: 20vh;
+            background: #000;
+            border-radius: 170px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
+            padding: 2vh;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+	    border-radius: 170px;
+            object-fit: contain;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-box {
+            background: white;
+            border-radius: 16px;
+            padding: 20px 30px;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-box:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .link-box:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .link-box:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .link-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.03) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .link-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .link-box:hover::before {
+            opacity: 1;
+        }
+
+        .link-box:active {
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 24px;
+        }
+
+        /* Cores CMYK convertidas para RGB */
+        .whatsapp-icon {
+            background: #00B8CE; /* Ciano */
+        }
+
+        .website-icon {
+            background: #EC008C; /* Magenta */
+        }
+
+        .instagram-icon {
+            background: #FFF100; /* Amarelo */
+        }
+
+        .link-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .link-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1f2937;
+        }
+
+        .link-description {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .arrow {
+            font-size: 20px;
+            color: #9ca3af;
+            transition: transform 0.3s ease;
+        }
+
+        .link-box:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        footer {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                width: 240px;
+                height: 120px;
+            }
+
+            .link-box {
+                padding: 18px 20px;
+            }
+
+            .link-title {
+                font-size: 16px;
+            }
+
+            .link-description {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Paper Office Gráfica">
+            </div>
+            <p class="subtitle">Soluções Gráficas</p>
+            <p class="description">Entre em contato conosco!</p>
+        </div>
+
+        <div class="links">
+            <a href="https://wa.me/5519997311902" target="_blank" class="link-box">
+                <div class="icon whatsapp-icon">
+                    📱
+                </div>
+                <div class="link-content">
+                    <div class="link-title">WhatsApp</div>
+                    <div class="link-description">Fale conosco agora mesmo</div>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+
+            <a href="https://www.paperofficegrafica.com.br" target="_blank" class="link-box">
+                <div class="icon website-icon">
+                    🌐
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Nosso Site</div>
+                    <div class="link-description">Conheça nossos produtos e serviços</div>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+
+            <a href="https://instagram.com/grafica.paperoffice" target="_blank" class="link-box">
+                <div class="icon instagram-icon">
+                    📸
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Instagram</div>
+                    <div class="link-description">Acompanhe nossas novidades</div>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+        </div>
+
+        <footer>
+            © 2026 Paper Office Gráfica - Designed by SkyZ Design - Todos os direitos reservados
+        </footer>
+    </div>
+</body>
+</html>
